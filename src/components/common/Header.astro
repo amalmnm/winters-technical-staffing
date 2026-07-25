@@ -1,0 +1,77 @@
+---
+const navItems = [
+  { title: "Home", href: "/" },
+  { title: "About", href: "/about" },
+  { title: "Employers", href: "/employers" },
+  { title: "Job Seekers", href: "/job-seekers" },
+  { title: "Industries", href: "/industries" },
+  { title: "Resources", href: "/resources" },
+  { title: "Contact", href: "/contact" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+
+    <div class="container mx-auto">
+
+        <div class="flex items-center justify-between py-5">
+
+            <!-- Logo -->
+
+            <a href="/">
+                <img
+                    src="/images/logo.jpg"
+                    alt="Winters"
+                    class="h-16 w-auto"
+                >
+            </a>
+
+            <!-- Desktop Menu -->
+
+            <nav class="hidden lg:flex items-center gap-8">
+
+                {
+                    navItems.map((item) => (
+
+                        <a
+                            href={item.href}
+                            class:list={[
+                                "font-semibold uppercase text-sm transition",
+                                currentPath === item.href
+                                    ? "text-blue-600"
+                                    : "text-slate-700 hover:text-blue-600",
+                            ]}
+                        >
+                            {item.title}
+                        </a>
+
+                    ))
+                }
+
+            </nav>
+
+            <!-- CTA -->
+
+            <a
+                href="/contact"
+                class="hidden lg:flex bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition"
+            >
+                Contact Us
+            </a>
+
+            <!-- Mobile -->
+
+            <button
+                id="menuBtn"
+                class="lg:hidden text-3xl"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
