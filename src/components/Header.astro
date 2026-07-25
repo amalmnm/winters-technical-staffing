@@ -1,0 +1,52 @@
+---
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Employers", href: "/employers" },
+  { label: "Job Seekers", href: "/job-seekers" },
+  { label: "Industries", href: "/industries" },
+  { label: "Resources", href: "/resources" },
+  { label: "Contact", href: "/contact" }
+];
+---
+
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200">
+  <div class="container mx-auto flex h-20 items-center justify-between px-4">
+
+    <a href="/" class="text-3xl font-extrabold text-sky-900">
+      Winters
+    </a>
+
+    <nav class="hidden lg:flex gap-8">
+      {
+        navItems.map(item => (
+          <a
+            href={item.href}
+            class="font-medium text-gray-700 hover:text-sky-700 transition"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="hidden lg:flex gap-3">
+      <a
+        href="/contact"
+        class="rounded-lg border border-sky-900 px-5 py-3 font-semibold text-sky-900 hover:bg-sky-50"
+      >
+        Find Talent
+      </a>
+
+      <a
+        href="/jobs"
+        class="rounded-lg bg-sky-900 px-5 py-3 font-semibold text-white hover:bg-sky-800"
+      >
+        Find Jobs
+      </a>
+    </div>
+
+    <button class="lg:hidden text-3xl">☰</button>
+
+  </div>
+</header>   
