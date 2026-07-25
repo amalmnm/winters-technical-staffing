@@ -1,52 +1,68 @@
 ---
 const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Employers", href: "/employers" },
-  { label: "Job Seekers", href: "/job-seekers" },
-  { label: "Industries", href: "/industries" },
-  { label: "Resources", href: "/resources" },
-  { label: "Contact", href: "/contact" }
+  { title: "Home", href: "/" },
+  { title: "About", href: "/about" },
+  { title: "Employers", href: "/employers" },
+  { title: "Job Seekers", href: "/job-seekers" },
+  { title: "Industries", href: "/industries" },
+  { title: "Resources", href: "/resources" },
+  { title: "Contact", href: "/contact" },
 ];
 ---
 
-<header class="sticky top-0 z-50 bg-white border-b border-gray-200">
-  <div class="container mx-auto flex h-20 items-center justify-between px-4">
+<header class="sticky top-0 z-50 bg-white border-b border-slate-200">
 
-    <a href="/" class="text-3xl font-extrabold text-sky-900">
-      Winters
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-12 py-5">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center shrink-0">
+      <img
+        src="/images/logo.jpg"
+        alt="Winters Technical Staffing"
+        class="h-16 w-auto object-contain"
+      />
     </a>
 
-    <nav class="hidden lg:flex gap-8">
+    <!-- Navigation -->
+    <nav class="hidden xl:flex items-center gap-8">
+
       {
-        navItems.map(item => (
+        navItems.map((item) => (
           <a
             href={item.href}
-            class="font-medium text-gray-700 hover:text-sky-700 transition"
+            class="text-[16px] font-semibold text-slate-700 hover:text-[#0B5ED7] transition-colors duration-300"
           >
-            {item.label}
+            {item.title}
           </a>
         ))
       }
+
     </nav>
 
-    <div class="hidden lg:flex gap-3">
+    <!-- Buttons -->
+    <div class="hidden xl:flex items-center gap-4">
+
       <a
         href="/contact"
-        class="rounded-lg border border-sky-900 px-5 py-3 font-semibold text-sky-900 hover:bg-sky-50"
+        class="rounded-lg border-2 border-[#0B5ED7] px-6 py-3 font-semibold text-[#0B5ED7] transition hover:bg-[#0B5ED7] hover:text-white"
       >
         Find Talent
       </a>
 
       <a
         href="/jobs"
-        class="rounded-lg bg-sky-900 px-5 py-3 font-semibold text-white hover:bg-sky-800"
+        class="rounded-lg bg-[#0B5ED7] px-6 py-3 font-semibold text-white transition hover:bg-[#0848A6]"
       >
         Find Jobs
       </a>
+
     </div>
 
-    <button class="lg:hidden text-3xl">☰</button>
+    <!-- Mobile -->
+    <button class="xl:hidden text-3xl font-bold">
+      ☰
+    </button>
 
   </div>
-</header>   
+
+</header>
