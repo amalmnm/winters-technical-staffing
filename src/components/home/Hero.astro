@@ -10,8 +10,7 @@ const home = pages.find(
 const data = home.data;
 ---
 
-<h1>{data.heroTitle}</h1>
-<p>{data.heroText}</p>
+
 
 
 <section class="relative flex min-h-screen flex-col xl:flex-row">
@@ -24,15 +23,8 @@ const data = home.data;
     
 
     <div class="relative z-10 w-full justify-end px-8 pb-10 lg:px-16 xl:px-24">
-      <div class="max-w-xl text-right">
-        <h1 class="mb-6 text-5xl font-bold leading-tight text-white xl:text-6xl">
-        {data.heroTextLleft.split('\n').map((line) => (
-        <>
-         {line}
-       <br />
-     </>
-  ))}
-        </h1>
+      <div class="max-w-xl text-right">      
+        <h1 class="mb-6 text-5xl font-bold leading-tight text-white xl:text-6xl" set:html={data.heroTextLleft}></h1>
         <a
           href={home.data.heroTextLleftBttonLink}
           class="inline-flex rounded-md bg-[#0D6EFD] px-8 py-4 font-semibold text-white transition hover:bg-[#0B5ED7]"
