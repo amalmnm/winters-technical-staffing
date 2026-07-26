@@ -1,4 +1,6 @@
 ---
 title: Home Page
-heroTitle: Find The Right Talent test
+heroTextLleft: Find Your Next Job
+heroTextLleftBttonText: Search Open Positions
+heroTextLleftBttonLink: "#"
 ---
