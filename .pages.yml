@@ -1,0 +1,40 @@
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: pages
+    label: Pages
+    path: src/content/pages
+    type: collection
+
+    filename: "{slug}.md"
+
+    fields:
+      - name: title
+        label: Title
+        type: string
+
+      - name: heroTitle
+        label: Hero Title
+        type: string
+
+      - name: heroText
+        label: Hero Text
+        type: text
+
+      - name: heroLeftButtonText
+        label: Button Text
+        type: string
+
+      - name: heroLeftButtonLink
+        label: Button Link
+        type: string
+
+      - name: aboutTitle
+        label: About Title
+        type: string
+
+      - name: aboutContent
+        label: About Content
+        type: text
