@@ -1,6 +1,6 @@
 ---
 title: Home Page
-heroTextLleft: Find Your Next Job test
+heroTextLleft: Find Your <br/> Next Job
 heroTextLleftBttonText: Search Open Positions
 heroTextLleftBttonLink: "#"
 ---
