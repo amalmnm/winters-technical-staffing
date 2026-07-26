@@ -26,8 +26,12 @@ const data = home.data;
     <div class="relative z-10 w-full justify-end px-8 pb-10 lg:px-16 xl:px-24">
       <div class="max-w-xl text-right">
         <h1 class="mb-6 text-5xl font-bold leading-tight text-white xl:text-6xl">
-         <!--  {home.data.heroTitle}-->
-            {data.heroTextLleft}
+        {data.heroTextLleft.split('\n').map((line) => (
+        <>
+         {line}
+       <br />
+     </>
+  ))}
         </h1>
         <a
           href={home.data.heroTextLleftBttonLink}
