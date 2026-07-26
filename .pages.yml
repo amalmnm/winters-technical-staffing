@@ -15,16 +15,16 @@ content:
         label: Title
         type: string
 
-      - name: heroTitle
+      - name: heroTextLleft
         label: Hero Title
         type: string
 
-      - name: heroText
-        label: Hero Text
+      - name: heroTextLleftBttonText
+        label: Button Text
         type: text
 
-      - name: heroLeftButtonText
-        label: Button Text
+      - name: heroTextLleftBttonLink
+        label: Button Link
         type: string
 
       - name: heroLeftButtonLink
