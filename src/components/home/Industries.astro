@@ -1,0 +1,64 @@
+---
+const industries = [
+  { title: "Manufacturing & Production", image: "/images/i-manufacturing.jpg", link: "/industries/engineering" },
+  { title: "Trades", image: "/images/i-trades.jpg", link: "/industries/manufacturing" },
+  { title: "Engineering,Design & Development", image: "/images/i-engineering.jpg", link: "/industries/it" },
+  { title: "Supply Chain", image: "/images/i-supply-chain.jpg", link: "/industries/accounting" },
+  { title: "Artificial Intelligence", image: "/images/i-ai.jpg", link: "/industries/construction" },
+  { title: "Customer Service", image: "/images/i-cs.jpg", link: "/industries/healthcare" },
+  { title: "Information Technology", image: "/images/i-it.jpg", link: "/industries/logistics" },
+  { title: "Aerospace", image: "/images/i-aerospace.jpg", link: "/industries/administration" },
+  { title: "Electronics", image: "/images/i-electronics.jpg", link: "/industries/skilled-trades" },
+];
+---
+
+<section class="py-24 bg-white">
+
+  <div class="mx-auto max-w-[1220px] px-5">
+
+    <!-- Heading -->
+    <div class="mx-auto mb-16 max-w-3xl text-center">
+
+      <h2 class="mb-6 text-5xl font-bold text-[#1F2937]">
+       Industries We Serve
+      </h2>
+
+      <p class="text-lg leading-8 text-gray-600">
+       We place skilled professionals across a range of specializations
+      </p>
+
+    </div>
+
+    <!-- Grid -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      {
+        industries.map((item) => (
+          <a
+            href={item.link}
+            class="group overflow-hidden rounded-lg bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          >
+
+            <div class="overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.title}
+                class="h-[251px] w-full object-cover transition duration-500 group-hover:scale-110"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-center text-2xl font-semibold text-[#1F2937] group-hover:text-[#0D6EFD]">
+                {item.title}
+              </h3>
+            </div>
+
+          </a>
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</section>

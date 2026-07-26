@@ -1,50 +1,60 @@
-<section
-  class="relative flex min-h-[750px] items-center bg-cover bg-center"
-  style="background-image:url('/images/hero.jpg')"
->
+---
+---
 
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black/55"></div>
+<section class="relative flex min-h-screen flex-col xl:flex-row">
 
-  <div class="container relative z-10 mx-auto px-6">
+  <!-- Left Side -->
+  <div
+    class="rrelative flex h-screen w-full items-end justify-end bg-cover bg-center xl:w-1/2"
+    style="background-image: url('/images/job-seeker.jpg');"
+  >
+    
 
-    <div class="max-w-3xl">
-
-      <span class="inline-block bg-[#005BAA] px-5 py-2 text-sm font-semibold uppercase tracking-widest text-white rounded">
-        Winters Technical Staffing
-      </span>
-
-      <h1 class="mt-8 text-5xl font-bold leading-tight text-white lg:text-7xl">
-        Connecting Great People
-        <br />
-        With Great Companies
-      </h1>
-
-      <p class="mt-8 max-w-2xl text-xl leading-9 text-white/90">
-        Over 50 years of helping employers hire the right people and helping
-        professionals build rewarding careers.
-      </p>
-
-      <div class="mt-10 flex flex-wrap gap-5">
-
+    <div class="relative z-10 w-full justify-end px-8 pb-10 lg:px-16 xl:px-24">
+      <div class="max-w-xl text-right">
+        <h1 class="mb-6 text-5xl font-bold leading-tight text-white xl:text-6xl">
+          Find Your <br />
+          Next Job
+        </h1>
         <a
           href="/job-seekers"
-          class="rounded bg-[#005BAA] px-8 py-4 font-semibold text-white transition hover:bg-blue-700"
+          class="inline-flex rounded-md bg-[#0D6EFD] px-8 py-4 font-semibold text-white transition hover:bg-[#0B5ED7]"
         >
-          Find Jobs
-        </a>
-
-        <a
-          href="/employers"
-          class="rounded border-2 border-white px-8 py-4 font-semibold text-white transition hover:bg-white hover:text-black"
-        >
-          Hire Talent
+          View Jobs
         </a>
 
       </div>
-
     </div>
+  </div>
 
+  <!-- Right Side -->
+  <div
+    class="relative flex w-full items-end bg-cover bg-center xl:w-1/2"
+    style="background-image: url('/images/employer.jpg');"
+  >
+    
+
+    <div class="relative z-10 w-full px-8 pb-10 lg:px-16 xl:px-24">
+      <div class="ml-auto max-w-xl">
+
+        
+
+        <h2 class="mb-6 text-5xl font-bold leading-tight text-white xl:text-6xl">
+          Discover Our <br />
+          Business Solutions
+        </h2>
+
+        
+
+        <a
+          href="/employers"
+          class="inline-flex rounded-md bg-[#0D6EFD] px-8 py-4 font-semibold text-white transition hover:bg-[#0B5ED7]"
+        >
+          Learn More
+        </a>
+
+      </div>
+    </div>
   </div>
 
 </section>

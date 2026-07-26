@@ -1,0 +1,58 @@
+---
+const stats = [
+  {
+    icon: "/images/icon-company.png",
+    number: "5,000+",
+    title: "COMPANIES SERVED",
+    iconClass: "w-[46px] h-[58px]",
+  },
+  {
+    icon: "/images/icon-skill.png",
+    number: "250,000+",
+    title: "SKILLED TALENT",
+    iconClass: "w-[58px] h-[58px]",
+  },
+  {
+    icon: "/images/icon-placement.png",
+    number: "100,000+",
+    title: "PLACEMENTS",
+    iconClass: "w-[62px] h-[58px]",
+  },
+];
+---
+
+<section class="bg-[#f9f9f9] py-20">
+  <div class="mx-auto max-w-[1220px] px-5">
+
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+
+      {
+        stats.map((item) => (
+          <div class="flex items-center gap-6">
+
+            <div class="flex  items-center justify-center">
+              <img
+    src={item.icon}
+    alt={item.title}
+    class:list={[item.iconClass, "object-contain"]}
+  />
+            </div>
+
+            <div>
+              <h3 class="text-5xl font-bold text-[#0F172A]">
+                {item.number}
+              </h3>
+
+              <p class="mt-2 text-sm font-semibold uppercase tracking-[2px] text-gray-500">
+                {item.title}
+              </p>
+            </div>
+
+          </div>
+        ))
+      }
+
+    </div>
+
+  </div>
+</section>

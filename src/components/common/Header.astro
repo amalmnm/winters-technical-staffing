@@ -9,69 +9,46 @@ const navItems = [
   { title: "Contact", href: "/contact" },
 ];
 
-const currentPath = Astro.url.pathname;
+const current = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-50 bg-white shadow-sm">
+<header
+  class="sticky top-0 left-0 z-50 w-full bg-white shadow-sm"
+>
+  <div class="px-5 lg:px-10 xl:px-20">
+    <div class="flex h-24 items-center justify-between">
 
-    <div class="container mx-auto">
+    <!-- Logo -->
+    <a href="/" class="shrink-0">
+      <img
+        src="/images/logo.jpg"
+        alt="Winters Technical Staffing"
+        class="h-16 w-auto"
+      />
+    </a>
 
-        <div class="flex items-center justify-between py-5">
+    <!-- Desktop Menu -->
+    <nav class="hidden xl:flex items-center gap-9">
 
-            <!-- Logo -->
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class="text-gray-900 hover:text-[#0D6EFD] transition-colors duration-300"
+          >
+            {item.title}
+          </a>
+        ))
+      }
 
-            <a href="/">
-                <img
-                    src="/images/logo.jpg"
-                    alt="Winters"
-                    class="h-16 w-auto"
-                >
-            </a>
+    </nav>
 
-            <!-- Desktop Menu -->
+   <!-- Mobile -->
 
-            <nav class="hidden lg:flex items-center gap-8">
+    <button class="xl:hidden text-3xl">
+      ☰
+    </button>
 
-                {
-                    navItems.map((item) => (
-
-                        <a
-                            href={item.href}
-                            class:list={[
-                                "font-semibold uppercase text-sm transition",
-                                currentPath === item.href
-                                    ? "text-blue-600"
-                                    : "text-slate-700 hover:text-blue-600",
-                            ]}
-                        >
-                            {item.title}
-                        </a>
-
-                    ))
-                }
-
-            </nav>
-
-            <!-- CTA -->
-
-            <a
-                href="/contact"
-                class="hidden lg:flex bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition"
-            >
-                Contact Us
-            </a>
-
-            <!-- Mobile -->
-
-            <button
-                id="menuBtn"
-                class="lg:hidden text-3xl"
-            >
-                ☰
-            </button>
-
-        </div>
-
-    </div>
-
+  </div>
+  </div>
 </header>
