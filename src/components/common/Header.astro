@@ -12,7 +12,7 @@ const current = Astro.url.pathname;
 ---
 
 <header
-  class="sticky top-0 left-0 z-50 w-full bg-white shadow-sm pt-[13px] pb-[22px]"
+  class="sticky top-0 left-0 z-50 w-full bg-white shadow-sm pt-[9px] pb-[18px]"
 >
   <div class="px-5 lg:px-10 xl:px-20">
     <div class="flex h-24 items-center justify-between">
@@ -33,7 +33,7 @@ const current = Astro.url.pathname;
         navItems.map((item) => (
          <a
   href={item.href}
-  class={`nav-link relative flex h-35 items-center px-5 text-[19px] font-bold uppercase transition-all duration-300 hover:bg-[#0D6EFD] ${
+  class={`nav-link relative flex h-33 pt-[8px] items-center px-5 text-[19px] font-bold uppercase transition-all duration-300 hover:bg-[#0D6EFD] ${
     current === item.href 
     ? "bg-[#FABF01] !text-black hover:bg-[#FABF01] hover:!text-black" 
     : "!text-[#116081] hover:bg-[#FABF01] hover:!text-black active:bg-[#FABF01] active:!text-black"

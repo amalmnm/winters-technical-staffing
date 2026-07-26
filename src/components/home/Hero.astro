@@ -1,5 +1,18 @@
 ---
+import { getCollection } from "astro:content";
+
+const pages = await getCollection("pages");
+
+const home = pages.find(
+  (page) => page.id === "home"
+);
+
+const data = home.data;
 ---
+
+<h1>{data.heroTitle}</h1>
+<p>{data.heroText}</p>
+
 
 <section class="relative flex min-h-screen flex-col xl:flex-row">
 
@@ -13,14 +26,14 @@
     <div class="relative z-10 w-full justify-end px-8 pb-10 lg:px-16 xl:px-24">
       <div class="max-w-xl text-right">
         <h1 class="mb-6 text-5xl font-bold leading-tight text-white xl:text-6xl">
-          Find Your <br />
-          Next Job
+         <!--  {home.data.heroTitle}-->
+            {data.heroTextLleft}
         </h1>
         <a
-          href="/job-seekers"
+          href={home.data.heroTextLleftBttonLink}
           class="inline-flex rounded-md bg-[#0D6EFD] px-8 py-4 font-semibold text-white transition hover:bg-[#0B5ED7]"
         >
-          View Jobs
+          {home.data.heroTextLleftBttonText} 
         </a>
 
       </div>
