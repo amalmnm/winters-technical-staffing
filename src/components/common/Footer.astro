@@ -26,18 +26,20 @@ const policy = [
 ];
 ---
 
-<footer class="bg-[#2D2D2D] text-gray-300">
+<footer class="bg-[#262626] text-white bg-repeat-x bg-top" 
+style="background-image: url('/images/footer-line.png');">
 
   <div class="mx-auto max-w-[1220px] px-5 py-20">
 
-    <div class="grid gap-16 lg:grid-cols-3">
+    <div class="grid gap-16 lg:grid-cols-2">
 
       <!-- Left -->
-      <div class="grid gap-12 sm:grid-cols-2">
+      <div class="grid lg:grid-cols-[55%_45%] gap-12">
 
         <div>
-          <h3 class="mb-6 border-b border-gray-500 pb-2 text-2xl font-semibold text-white">
+          <h3 class="mb-4 text-[20px] font-semibold text-white">
             Find the Right Position
+            <span class="mt-2 block h-[3px] w-[106px] bg-white"></span>
           </h3>
 
           <ul class="space-y-3">
@@ -55,8 +57,9 @@ const policy = [
             ))}
           </ul>
 
-          <h3 class="mt-14 mb-6 border-b border-gray-500 pb-2 text-2xl font-semibold text-white">
+          <h3 class="mt-14 mb-6 text-[20px] font-semibold text-white">
             Staffing Solutions
+            <span class="mt-2 block h-[3px] w-[106px] bg-white"></span>
           </h3>
 
           <ul class="space-y-3">
@@ -69,8 +72,9 @@ const policy = [
 
         <div>
 
-          <h3 class="mb-6 border-b border-gray-500 pb-2 text-2xl font-semibold text-white">
+          <h3 class="mb-6  text-[20px] font-semibold text-white">
             About Winters
+            <span class="mt-2 block h-[3px] w-[106px] bg-white"></span>
           </h3>
 
           <ul class="space-y-3">
@@ -79,8 +83,9 @@ const policy = [
             ))}
           </ul>
 
-          <h3 class="mt-14 mb-6 border-b border-gray-500 pb-2 text-2xl font-semibold text-white">
+          <h3 class="mt-14 mb-6 text-[20px] font-semibold text-white">
             Our Policies
+            <span class="mt-2 block h-[3px] w-[106px] bg-white"></span>
           </h3>
 
           <ul class="space-y-3">
@@ -94,10 +99,11 @@ const policy = [
       </div>
 
       <!-- Locations -->
-      <div class="lg:col-span-2">
+      <div class="lg:col-span-1">
 
-        <h3 class="mb-8 border-b border-gray-500 pb-2 text-2xl font-semibold text-white">
+        <h3 class="mb-8  pb-2 text-[20px] font-semibold text-white">
           Our Locations
+          <span class="mt-2 block h-[3px] w-[106px] bg-white"></span>
         </h3>
 
         <div class="grid gap-10 md:grid-cols-2">
@@ -110,15 +116,15 @@ const policy = [
             </h4>
 
             <img
-              src="/images/map-toronto.jpg"
+              src="/images/map-toronto.png"
               alt=""
               class="mb-5 h-[140px] w-full rounded object-cover"
             />
 
             <ul class="space-y-3 text-sm leading-7">
               <li>📍 505 Consumers Road, Suite 306 Toronto, Ontario, Canada M2J 4V8</li>
-              <li>☎ Phone: 647-556-2408</li>
-              <li>📠 Fax: 416-495-8479</li>
+              <li>☎ Phone:222-222-222</li>
+              <li>📠 Fax: 222-222-222</li>
             </ul>
 
           </div>
@@ -131,16 +137,16 @@ const policy = [
             </h4>
 
             <img
-              src="/images/map-ajax.jpg"
+              src="/images/map-toronto.png"
               alt=""
               class="mb-5 h-[140px] w-full rounded object-cover"
             />
 
             <ul class="space-y-3 text-sm leading-7">
               <li>📍 230 Westney Road, Suite 302 Ajax, Ontario, Canada L1S 7J5</li>
-              <li>☎ Phone: 905-231-3857</li>
-              <li>📞 Toll Free: 1-866-371-1014</li>
-              <li>📠 Fax: 905-231-3860</li>
+              <li>☎ Phone: 333-333-3857</li>
+              <li>📞 Toll Free: 1-324-444-5467</li>
+              <li>📠 Fax: 234-231-2345</li>
             </ul>
 
           </div>
@@ -161,32 +167,38 @@ const policy = [
       <img
         src="/images/footer-logo.png"
         alt="Logo"
-        class="h-16"
+        class="h-[72px] w-auto"
       />
 
       <div class="flex gap-3">
 
-        <a href="#" class="flex h-10 w-10 items-center justify-center rounded bg-[#1877F2] text-white">
-          <i class="fa-brands fa-facebook-f"></i>
+        <a href="#" class="flex justify-center">
+           <img
+        src="/images/icon-facebook.png"
+        alt="Facebook"
+        class="h-8 w-auto"
+      />
         </a>
 
-        <a href="#" class="flex h-10 w-10 items-center justify-center rounded bg-[#0A66C2] text-white">
-          <i class="fa-brands fa-linkedin-in"></i>
+        <a href="#" class="flex justify-center ">
+         <img
+        src="/images/icon-linkedin.png"
+        alt="linkedin"
+        class="h-8 w-auto"
+      />
         </a>
 
-        <a href="#" class="flex h-10 w-10 items-center justify-center rounded bg-[#1DA1F2] text-white">
-          <i class="fa-brands fa-twitter"></i>
+        <a href="#" class="flex justify-center">
+         <img
+        src="/images/icon-twitter.png"
+        alt="twitter"
+        class="h-8 w-auto"
+      />
         </a>
 
       </div>
 
-      <div class="text-center text-sm text-gray-400 md:text-right">
-        <p>Copyright © 2022 Winters Technical Staffing</p>
-        <p class="mt-2">
-          Website by
-          <span class="text-[#F9B233]">WSI Comandix</span>
-        </p>
-      </div>
+   
 
     </div>
 

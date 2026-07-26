@@ -1,11 +1,10 @@
 ---
 const navItems = [
-  { title: "Home", href: "/" },
-  { title: "About", href: "/about" },
-  { title: "Employers", href: "/employers" },
-  { title: "Job Seekers", href: "/job-seekers" },
-  { title: "Industries", href: "/industries" },
-  { title: "Resources", href: "/resources" },
+  { title: "Job Seekers", href: "job-seekers" },
+  { title: "Employers", href: "/about" },
+  { title: "Industry Solutions", href: "/employers" },
+  { title: "Knowledge Centre", href: "/job-seekers" },
+  { title: "About Us", href: "/industries" },
   { title: "Contact", href: "/contact" },
 ];
 
@@ -13,7 +12,7 @@ const current = Astro.url.pathname;
 ---
 
 <header
-  class="sticky top-0 left-0 z-50 w-full bg-white shadow-sm"
+  class="sticky top-0 left-0 z-50 w-full bg-white shadow-sm pt-[13px] pb-[22px]"
 >
   <div class="px-5 lg:px-10 xl:px-20">
     <div class="flex h-24 items-center justify-between">
@@ -23,21 +22,26 @@ const current = Astro.url.pathname;
       <img
         src="/images/logo.jpg"
         alt="Winters Technical Staffing"
-        class="h-16 w-auto"
+        class="h-[97] w-auto"
       />
     </a>
 
     <!-- Desktop Menu -->
-    <nav class="hidden xl:flex items-center gap-9">
+    <nav class="hidden xl:flex items-center">
 
       {
         navItems.map((item) => (
-          <a
-            href={item.href}
-            class="text-gray-900 hover:text-[#0D6EFD] transition-colors duration-300"
-          >
-            {item.title}
-          </a>
+         <a
+  href={item.href}
+  class={`nav-link relative flex h-35 items-center px-5 text-[19px] font-bold uppercase transition-all duration-300 hover:bg-[#0D6EFD] ${
+    current === item.href 
+    ? "bg-[#FABF01] !text-black hover:bg-[#FABF01] hover:!text-black" 
+    : "!text-[#116081] hover:bg-[#FABF01] hover:!text-black active:bg-[#FABF01] active:!text-black"
+  }`}
+>
+  {item.title}
+</a>
+
         ))
       }
 

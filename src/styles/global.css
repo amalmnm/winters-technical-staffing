@@ -1,17 +1,14 @@
 @import "tailwindcss";
 
 
-
+body {
+    font-family: "Work Sans", sans-serif;
+}
 
 html{
     scroll-behavior:smooth;
 }
 
-body{
-    font-family:'Inter',sans-serif;
-    color:#1f2937;
-    background:#fff;
-}
 
 .container{
     width:min(1320px,92%);
