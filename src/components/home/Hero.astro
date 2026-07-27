@@ -13,23 +13,23 @@ const data = home.data;
 
 
 
-<section class="relative flex min-h-screen flex-col xl:flex-row">
+<section class="relative flex min-h-[calc(100vh-122px)] flex-col xl:flex-row">
 
   <!-- Left Side -->
   <div
-    class="rrelative flex h-screen w-full items-end justify-end bg-cover bg-center xl:w-1/2"
+    class="rrelative flex h-[calc(100vh-122px)] w-full items-end justify-end bg-cover bg-center xl:w-1/2"
     style="background-image: url('/images/job-seeker.jpg');"
   >
     
 
-    <div class="relative z-10 w-full justify-end px-8 pb-10 lg:px-16 xl:px-24">
+    <div class="relative z-10 flex w-full justify-end pr-10 pb-10">
       <div class="max-w-xl text-right">      
-        <h1 class="mb-6 text-5xl font-bold leading-tight text-white xl:text-6xl" set:html={data.heroTextLleft}></h1>
+        <h1 class="mb-6 text-5xl font-bold leading-[0.9] text-white xl:text-6xl" set:html={data.heroTextLleft}></h1>
         <a
           href={home.data.heroTextLleftBttonLink}
-          class="inline-flex rounded-md bg-[#0D6EFD] px-8 py-4 font-semibold text-white transition hover:bg-[#0B5ED7]"
-        >
+          class="btn inline-flex items-center gap-2  pl-[17px] pr-[60px] py-2 font-semibold  transition duration-300" >
           {home.data.heroTextLleftBttonText} 
+           
         </a>
 
       </div>
@@ -43,12 +43,12 @@ const data = home.data;
   >
     
 
-    <div class="relative z-10 w-full px-8 pb-10 lg:px-16 xl:px-24">
-      <div class="ml-auto max-w-xl">
+    <div class="relative  flex z-10 w-full pl-10 pb-10 lg:pr-16 xl:pr-24">
+      <div class=" max-w-xl">
 
         
 
-        <h2 class="mb-6 text-5xl font-bold leading-tight text-white xl:text-6xl">
+        <h2 class="mb-6 text-5xl font-bold leading-[0.9] text-white xl:text-6xl">
           Discover Our <br />
           Business Solutions
         </h2>
@@ -57,9 +57,9 @@ const data = home.data;
 
         <a
           href="/employers"
-          class="inline-flex rounded-md bg-[#0D6EFD] px-8 py-4 font-semibold text-white transition hover:bg-[#0B5ED7]"
+          class="btn inline-flex items-center gap-2  pl-[17px] pr-[60px] py-2 font-semibold  transition duration-300"
         >
-          Learn More
+          Find Out More
         </a>
 
       </div>

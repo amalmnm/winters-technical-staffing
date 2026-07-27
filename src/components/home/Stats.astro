@@ -2,26 +2,26 @@
 const stats = [
   {
     icon: "/images/icon-company.png",
-    number: "5,000+",
+    number: "5,000",
     title: "COMPANIES SERVED",
     iconClass: "w-[46px] h-[58px]",
   },
   {
     icon: "/images/icon-skill.png",
-    number: "250,000+",
+    number: "250,000",
     title: "SKILLED TALENT",
     iconClass: "w-[58px] h-[58px]",
   },
   {
     icon: "/images/icon-placement.png",
-    number: "100,000+",
+    number: "100,000",
     title: "PLACEMENTS",
     iconClass: "w-[62px] h-[58px]",
   },
 ];
 ---
 
-<section class="bg-[#f9f9f9] py-20">
+<section class="bg-[#f9f9f9] py-[47px]">
   <div class="mx-auto max-w-[1220px] px-5">
 
     <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
@@ -39,11 +39,12 @@ const stats = [
             </div>
 
             <div>
-              <h3 class="text-5xl font-bold text-[#0F172A]">
-                {item.number}
+              <h3 class="counter text-5xl font-bold text-[#0F172A]" 
+              data-target={item.number.replace(/,/g, "")}>
+               0+
               </h3>
 
-              <p class="mt-2 text-sm font-semibold uppercase tracking-[2px] text-gray-500">
+              <p class="mt-1 text-xl font-semibold uppercase tracking-[2px] text-[#323232]">
                 {item.title}
               </p>
             </div>
@@ -56,3 +57,25 @@ const stats = [
 
   </div>
 </section>
+<script>
+  const counters = document.querySelectorAll(".counter");
+
+  counters.forEach((counter) => {
+    const target = Number(counter.dataset.target);
+    let count = 0;
+    const step = target / 100;
+
+    const update = () => {
+      count += step;
+
+      if (count < target) {
+        counter.textContent = Math.floor(count).toLocaleString() + "+";
+        requestAnimationFrame(update);
+      } else {
+        counter.textContent = target.toLocaleString() + "+";
+      }
+    };
+
+    update();
+  });
+</script>

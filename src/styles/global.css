@@ -32,3 +32,37 @@ button{
 .section{
     padding:90px 0;
 }
+
+.btn{
+    background-image: url('images/arrow-bw.png');
+    background-repeat: no-repeat;
+    background-position: 102% 107%;
+    background-color: #116081;
+    color: #fff;
+    font-size: 22px;;
+    
+}
+.btn:hover{
+     background-position: 100% 100%;
+    background-color: #fabf01;
+    color: #000;
+    background-position: 102% 13px;
+}
+
+.btn-ornag{
+    background-image: url('images/arrow-bw.png');
+    background-repeat: no-repeat;
+   
+    background-color: #116081;
+     background-color: #fabf01;
+     color: #000;
+    font-size: 22px;
+     background-position: 102% 13px;
+    
+}
+.btn-ornag:hover{
+     background-position: 100% 100%;
+    background-color: #116081;   
+    color: #fff;
+    background-position: 102% 107%;
+}
