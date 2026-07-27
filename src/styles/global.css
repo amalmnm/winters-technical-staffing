@@ -34,7 +34,7 @@ button{
 }
 
 .btn{
-    background-image: url('images/arrow-bw.png');
+    background-image: url('../images/arrow-bw.png');
     background-repeat: no-repeat;
     background-position: 102% 107%;
     background-color: #116081;
@@ -50,7 +50,7 @@ button{
 }
 
 .btn-ornag{
-    background-image: url('images/arrow-bw.png');
+    background-image: url('../images/arrow-bw.png');
     background-repeat: no-repeat;
    
     background-color: #116081;
