@@ -49,6 +49,14 @@ button{
     background-position: 102% 13px;
 }
 
+.btn1{
+    background-image: url('../images/arrow-bw.png');
+     background-position: 100% 100%;
+    background-color: #fabf01;
+    color: #000;
+    background-position: 102% 13px;
+}
+
 .btn-ornag{
     background-image: url('../images/arrow-bw.png');
     background-repeat: no-repeat;
@@ -65,4 +73,31 @@ button{
     background-color: #116081;   
     color: #fff;
     background-position: 102% 107%;
+}
+
+.titl-arro{
+    background-image: url('../images/arrow-bb.png');
+    background-repeat: no-repeat;
+    background-position: 100% 8px;
+    display:inline-block;
+    padding-right: 34px;
+    
+}
+
+.titl-arro:hover{
+    color: #116081;
+     background-position: 100% 111%;
+}
+
+.location-itm li{
+padding-left: 26px;
+}
+.location-itm li.location{
+    background: url('../images/icon-location.png') no-repeat 0 0;;
+}
+.location-itm li.phn{
+    background: url('../images/icon-phone.png') no-repeat 0 0;;
+}
+.location-itm li.fax{
+    background: url('../images/icon-fax.png') no-repeat 0 0;;
 }

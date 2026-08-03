@@ -37,7 +37,7 @@ style="background-image: url('/images/footer-line.png');">
       <div class="grid lg:grid-cols-[55%_45%] gap-12">
 
         <div>
-          <h3 class="mb-4 text-[20px] font-semibold text-white">
+          <h3 class="mb-4 text-[20px] font-medium  text-white">
             Find the Right Position
             <span class="mt-2 block h-[3px] w-[106px] bg-white"></span>
           </h3>
@@ -47,8 +47,8 @@ style="background-image: url('/images/footer-line.png');">
               <li>
                 <a
                   href="#"
-                  class={`transition hover:text-[#F9B233] ${
-                    index===0 ? "text-[#F9B233]" : ""
+                  class={`!text-[#aaaaaa] transition hover:!text-[#fcb451] ${
+                    index===0 ? "text-[#aaaaaa]" : ""
                   }`}
                 >
                   {item}
@@ -57,14 +57,14 @@ style="background-image: url('/images/footer-line.png');">
             ))}
           </ul>
 
-          <h3 class="mt-14 mb-6 text-[20px] font-semibold text-white">
+          <h3 class="mt-14 mb-6 text-[20px] font-medium  text-white">
             Staffing Solutions
             <span class="mt-2 block h-[3px] w-[106px] bg-white"></span>
           </h3>
 
           <ul class="space-y-3">
             {staffing.map(item=>(
-              <li><a href="#" class="hover:text-[#F9B233]">{item}</a></li>
+              <li><a href="#" class="!text-[#aaaaaa] hover:!text-[#fcb451]">{item}</a></li>
             ))}
           </ul>
 
@@ -72,25 +72,25 @@ style="background-image: url('/images/footer-line.png');">
 
         <div>
 
-          <h3 class="mb-6  text-[20px] font-semibold text-white">
+          <h3 class="mb-6  text-[20px] font-medium  text-white">
             About Winters
             <span class="mt-2 block h-[3px] w-[106px] bg-white"></span>
           </h3>
 
           <ul class="space-y-3">
             {about.map(item=>(
-              <li><a href="#" class="hover:text-[#F9B233]">{item}</a></li>
+              <li><a href="#" class="!text-[#aaaaaa] hover:!text-[#fcb451]">{item}</a></li>
             ))}
           </ul>
 
-          <h3 class="mt-14 mb-6 text-[20px] font-semibold text-white">
+          <h3 class="mt-14 mb-6 text-[20px] font-medium  text-white">
             Our Policies
             <span class="mt-2 block h-[3px] w-[106px] bg-white"></span>
           </h3>
 
           <ul class="space-y-3">
             {policy.map(item=>(
-              <li><a href="#" class="hover:text-[#F9B233]">{item}</a></li>
+              <li><a href="#" class="!text-[#aaaaaa] hover:!text-[#fcb451]">{item}</a></li>
             ))}
           </ul>
 
@@ -101,7 +101,7 @@ style="background-image: url('/images/footer-line.png');">
       <!-- Locations -->
       <div class="lg:col-span-1">
 
-        <h3 class="mb-8  pb-2 text-[20px] font-semibold text-white">
+        <h3 class="mb-1  pb-2 text-[26px] font-medium  text-white">
           Our Locations
           <span class="mt-2 block h-[3px] w-[106px] bg-white"></span>
         </h3>
@@ -111,7 +111,7 @@ style="background-image: url('/images/footer-line.png');">
           <!-- Toronto -->
           <div>
 
-            <h4 class="mb-4 text-xl font-semibold text-white">
+            <h4 class="mb-4 text-xl font-medium  text-white">
               Head Office – Toronto
             </h4>
 
@@ -121,10 +121,10 @@ style="background-image: url('/images/footer-line.png');">
               class="mb-5 h-[140px] w-full rounded object-cover"
             />
 
-            <ul class="space-y-3 text-sm leading-7">
-              <li>📍 505 Consumers Road, Suite 306 Toronto, Ontario, Canada M2J 4V8</li>
-              <li>☎ Phone:222-222-222</li>
-              <li>📠 Fax: 222-222-222</li>
+            <ul class="location-itm space-y-3 text-[16px] text-[#aaaaaa] leading-[17px]">
+              <li class="location">505 Consumers Road, Suite 306 Toronto, Ontario, Canada M2J 4V8</li>
+              <li class="phn">Phone:222-222-222</li>
+              <li class="fax">Fax: 222-222-222</li>
             </ul>
 
           </div>
@@ -132,7 +132,7 @@ style="background-image: url('/images/footer-line.png');">
           <!-- Ajax -->
           <div>
 
-            <h4 class="mb-4 text-xl font-semibold text-white">
+            <h4 class="mb-4 text-xl font-medium  text-white">
               Ajax Office
             </h4>
 
@@ -142,11 +142,11 @@ style="background-image: url('/images/footer-line.png');">
               class="mb-5 h-[140px] w-full rounded object-cover"
             />
 
-            <ul class="space-y-3 text-sm leading-7">
-              <li>📍 230 Westney Road, Suite 302 Ajax, Ontario, Canada L1S 7J5</li>
-              <li>☎ Phone: 333-333-3857</li>
-              <li>📞 Toll Free: 1-324-444-5467</li>
-              <li>📠 Fax: 234-231-2345</li>
+            <ul class="location-itm space-y-3 text-[16px] text-[#aaaaaa] leading-[17px]">
+              <li class="location">230 Westney Road, Suite 302 Ajax, Ontario, Canada L1S 7J5</li>
+              <li class="phn">Phone: 333-333-3857</li>
+              <li class="phn">Toll Free: 1-324-444-5467</li>
+              <li class="fax">Fax: 234-231-2345</li>
             </ul>
 
           </div>
